@@ -1,11 +1,19 @@
-# リモートリポジトリをクローン
+# リモートリポジトリをクローンする。
 $ git clone git@github.com:ytk/test.git mytest # 末尾の mytest は省略できる。(その場合 test.git の test が使われる)
 $ cd mytest
 
-# ローカルリポジトリに log.txt を追加
+# ローカルリポジトリに log.txt を追加する。
 $ vi log.txt
 $ git add log.txt    # 既に log.txt が存在していた場合でも、変更した場合は git add で commit できる状態にする必要がある。
 $ git commit log.txt # "git commit -a" とすると "git add -u; git commit" と同じことができる。
 
-# ローカルリポジトリの変更をリモートレポジトリにpush
-$ git push origin master
+# ローカルリポジトリの変更をリモートレポジトリにマージする。
+$ git push origin master # origin:リモートリポジトリ, master:ローカルリポジトリ
+
+# 差分を見る。
+$ vi log.txt         # 既にある log.txt を編集する。
+$ git diff           # ステージ (git add) されていない差分が表示される。
+$ git add log.txt    # ステージする。
+$ git diff           # ステージされていない差分は無いので何も表示されない。
+$ git diff --staged  # ステージされているものとリポジトリとの差分が表示される。
+$ git commit log.txt
