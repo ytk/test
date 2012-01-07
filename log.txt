@@ -19,6 +19,12 @@ $ git diff --staged  # ステージされているものとリポジトリとの
 $ git commit log.txt
 $ git diff --staged  # ステージされているものとリポジトリとの差分は無いので何も表示されない。
 
+# ステージしたものをを取り消す
+$ vi log.txt
+$ git add log.txt        # 修正途中でステージしてしまった。
+$ git reset HEAD log.txt # 取り消す。
+$ git diff               # 差分から消えている。
+
 # commit ミスを直す(コミットメッセージの変更のみも可能)
 $ vi log.txt
 $ git commit -a      # 修正途中でコミットしてしまった。
