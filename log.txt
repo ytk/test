@@ -10,6 +10,9 @@ $ git commit log.txt # "git commit -a" とすると "git add -u; git commit" と
 # ローカルリポジトリの変更をリモートレポジトリにマージする。
 $ git push origin master # origin:リモートリポジトリ, master:ローカルリポジトリ
 
+# リモートリポジトリの変更をローカルレポジトリにマージする。
+$ git fetch origin
+
 # 差分を見る。
 $ vi log.txt         # 既にある log.txt を編集する。
 $ git diff           # ステージ (git add) されていない差分が表示される。
