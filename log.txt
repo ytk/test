@@ -10,9 +10,6 @@ $ git commit log.txt # "git commit -a" とすると "git add -u; git commit" と
 # ローカルリポジトリの変更をリモートレポジトリにマージする。
 $ git push origin master # origin:リモートリポジトリ, master:ローカルリポジトリ
 
-# リモートリポジトリの変更をローカルレポジトリにマージする。
-$ git fetch origin
-
 # 差分を見る。
 $ vi log.txt         # 既にある log.txt を編集する。
 $ git diff           # ステージ (git add) されていない差分が表示される。
@@ -44,4 +41,15 @@ $ git log            # ログに誤ったコミットが記録されている。
 $ vi log.txt         # 正しい修正に直す。
 $ git commit --amend # 直前にコミットした内容を引き継いで、ステージされたものと併せてコミットする。
 $ git log            # 誤ったログが消え、コミットしなおしたログに差し替わっている。
+
+# ブランチを作る。
+$ git branch mybranch      # mybranch の作成。
+$ git checkout mybranch    # mybranch にスイッチ。"git checkout -b mybranch" とすると mybranch の作成とスイッチが同時にできる。
+
+# ブランチを消す。
+$ git branch -d mybranch
+
+# リモートリポジトリの変更をローカルレポジトリにマージする。
+$ git fetch origin # fetch では自分でマージを行う必要がある。
+$ git pull origin  # pull では自動でマージされる。
 
