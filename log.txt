@@ -1,5 +1,8 @@
+# チェックアウト
 $ git clone git@github.com:ytk/test.git
 $ cd test
+
+# ファイル追加
 $ vi log.txt
 $ git add log.txt
 $ git commit log.txt
