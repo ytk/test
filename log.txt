@@ -58,4 +58,3 @@ $ git branch -d mybranch
 # リモートリポジトリの変更をローカルレポジトリにマージする。
 $ git fetch origin # fetch では自分でマージを行う必要がある。
 $ git pull origin  # pull では自動でマージされる。
-
