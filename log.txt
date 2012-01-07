@@ -46,6 +46,12 @@ $ git log            # 誤ったログが消え、コミットしなおしたロ
 $ git branch mybranch      # mybranch の作成。
 $ git checkout mybranch    # mybranch にスイッチ。"git checkout -b mybranch" とすると mybranch の作成とスイッチが同時にできる。
 
+# ブランチをマージする。
+$ vi log.txt # mybranch 上で修正。
+$ git commit -a
+$ git checkout master # マージ先のブランチにスイッチ。
+$ git merge mybranch  # mybranch の内容を master にマージ。コンフリクトがある場合は、手動で直した後に git add -> git commit を行う。
+
 # ブランチを消す。
 $ git branch -d mybranch
 
