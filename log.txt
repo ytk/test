@@ -19,10 +19,11 @@ $ git diff --staged  # ステージされているものとリポジトリとの
 $ git commit log.txt
 $ git diff --staged  # ステージされているものとリポジトリとの差分は無いので何も表示されない。
 
-# commit ミスを直す
+# commit ミスを直す(コミットメッセージの変更のみも可能)
 $ vi log.txt
 $ git commit -a      # 修正途中でコミットしてしまった。
 $ git log            # ログに誤ったコミットが記録されている。
 $ vi log.txt         # 正しい修正に直す。
 $ git commit --amend # 直前にコミットした内容を引き継いで、ステージされたものと併せてコミットする。
+$ git log            # 誤ったログが消え、コミットしなおしたログに差し替わっている。
 
