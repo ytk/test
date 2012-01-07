@@ -1,11 +1,11 @@
-# リポジトリをクローン
-$ git clone git@github.com:ytk/test.git
-$ cd test
+# リモートリポジトリをクローン
+$ git clone git@github.com:ytk/test.git mytest # 末尾の mytest は省略できる。(その場合 test.git の test が使われる)
+$ cd mytest
 
-# ローカルリポジトリにファイルを追加
+# ローカルリポジトリに log.txt を追加
 $ vi log.txt
-$ git add log.txt
-$ git commit log.txt # "git commit -a" = "git add -u; git commit"
+$ git add log.txt    # 既に log.txt が存在していた場合でも、変更した場合は git add で commit できる状態にする必要がある。
+$ git commit log.txt # "git commit -a" とすると "git add -u; git commit" と同じことができる。
 
 # ローカルリポジトリの変更をリモートレポジトリにpush
 $ git push origin master
