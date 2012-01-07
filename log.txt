@@ -1,0 +1,5 @@
+$ git clone git@github.com:ytk/test.git
+$ cd test
+$ vi log.txt
+$ git add log.txt
+$ git commit log.txt
